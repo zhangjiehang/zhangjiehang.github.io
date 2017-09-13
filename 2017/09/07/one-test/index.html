@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="特大碗拉面博客">
 <meta property="og:description" content="Welcome to Hexo: This is your very first post.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-07T10:18:31.548Z">
+<meta property="og:updated_time" content="2017-09-13T10:45:33.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zhang test">
 <meta name="twitter:description" content="Welcome to Hexo: This is your very first post.">
@@ -320,14 +320,47 @@
       
           
         <p>Welcome to Hexo: This is your very first post.<br><a id="more"></a><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><h1 id="个人博客文档存档"><a href="#个人博客文档存档" class="headerlink" title="个人博客文档存档"></a>个人博客文档存档</h1><hr>
+<p>安装过程：</p>
+<ol>
+<li>安装node.js</li>
+<li>安装Hexo:cnpm install -g hexo-cli</li>
+<li>打开git命令行工具：hexo init blog</li>
+<li>hexo g == hexo generate #生成</li>
+<li>hexo s == hexo server #启动服务预览</li>
+<li><p>推送网站前需要设置参数：<br>deploy: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">type: git</div><div class="line">repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
+</li>
+<li><p>cnpm install hexo-deployer-git –save</p>
+</li>
+<li>输入下面命令就可以推送了：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean </div><div class="line">hexo g </div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<ol>
+<li>然后就可以访问了</li>
+<li>参考网址[：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/26625249</a>]</li>
+</ol>
+<h2 id="新下的功能步骤："><a href="#新下的功能步骤：" class="headerlink" title="新下的功能步骤："></a>新下的功能步骤：</h2><ol>
+<li>在工程里面执行 cnpm install 安装对应包</li>
+<li>推送不上去参考最下面解决方法</li>
+<li>使用 hexo d 需要在git bash 中使用，在cmd使用是不行的，不知道什么原因</li>
+</ol>
+<h3 id="发生hexo-d-推送不上去处理现象："><a href="#发生hexo-d-推送不上去处理现象：" class="headerlink" title="发生hexo d 推送不上去处理现象："></a>发生hexo d 推送不上去处理现象：</h3><p>1、新建 SSH key，在git shell:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;邮箱名&quot;</div></pre></td></tr></table></figure></p>
+<p>然后会出现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/c/Users/dell/.ssh/id_rsa):</div></pre></td></tr></table></figure></p>
+<p>直接回车就可以。<br>然后会出现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div></pre></td></tr></table></figure></p>
+<p>要求你输入密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。<br>然后会出现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">Your identification has been saved in /c/Users/dell/.ssh/id_rsa.</div><div class="line">Your public key has been saved in /c/Users/dell/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:</div><div class="line">65:69:······02:4b emailname@email.com</div><div class="line">The key&apos;s randomart image is:</div><div class="line">+--[ RSA 2048]----+</div><div class="line">|                 |</div><div class="line">|       .   o .   |</div><div class="line">|    . o o = o    |</div><div class="line">|   . o * = o     |</div><div class="line">|  E  o + o .     |</div><div class="line">| . o.   . .      |</div><div class="line">|     ..          |</div><div class="line">+-----------------+</div></pre></td></tr></table></figure></p>
+<p>2、接下来在github上添加SSH key：</p>
+<ul>
+<li><p>打开本地文件：id_rsa.pub（文件路径可以在上一步SSH生成成功后看到路径，比如我的是c/Users/dell/.ssh/id_rsa.pub），可以将这个文件在编辑器中打开，然后全选复制。</p>
+</li>
+<li><p>登陆github，点击头像位置处 Settings ——&gt; SSH and GPG keys ——&gt; New SSH key，点击新建SSH key。</p>
+</li>
+<li><p>将 ① 中复制的内容粘贴在key文本框里，title可以不用填（或者自己起一个名字也可以）。</p>
+</li>
+<li></li>
+</ul>
+<p>3、测试设置是否成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p>最后就能部署了</p>
 
       
     </div>
@@ -339,7 +372,7 @@
         <p><span>本文标题:</span><a href="/2017/09/07/one-test/">zhang test</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">特大碗拉面</a></p>
         <p><span>发布时间:</span>2017-09-07, 17:53:09</p>
-        <p><span>最后更新:</span>2017-09-07, 18:18:31</p>
+        <p><span>最后更新:</span>2017-09-13, 18:45:33</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/09/07/one-test/" title="zhang test">http://yoursite.com/2017/09/07/one-test/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/09/07/one-test/　　作者: 特大碗拉面" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -354,12 +387,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
+        
+            <div id="article-nav-older" class="article-nav-title">
                 <a href="/2017/09/07/hello-world/">
                     Hello World
                 </a>
             </div>
-        
         
     </nav>
 
@@ -369,7 +402,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#个人博客文档存档"><span class="toc-number"></span> <span class="toc-text">个人博客文档存档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#新下的功能步骤："><span class="toc-number">1.</span> <span class="toc-text">新下的功能步骤：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#发生hexo-d-推送不上去处理现象："><span class="toc-number">1.1.</span> <span class="toc-text">发生hexo d 推送不上去处理现象：</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -439,19 +472,19 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/09/07/hello-world/" title="上一篇: Hello World">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/09/07/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/09/07/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/07/one-test/">zhang test</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/09/07/one-test/">zhang test</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/07/hello-world/">Hello World</a></li></ul>
 
 
 
